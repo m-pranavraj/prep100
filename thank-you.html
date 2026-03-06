@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You! – Prep100</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(160deg, #08001a 0%, #1a0635 50%, #250C45 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            color: #f4eaff;
+        }
+
+        .logo {
+            height: 80px;
+            margin-bottom: 32px;
+            filter: drop-shadow(0 0 16px rgba(200, 14, 231, 0.5));
+        }
+
+        .icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            margin-bottom: 16px;
+            background: linear-gradient(120deg, #C80EE7, #ff9bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #b0a0cc;
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #C80EE7, #D513F0);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 6px 24px rgba(200, 14, 231, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(200, 14, 231, 0.55);
+        }
+
+        .steps {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(200, 14, 231, 0.25);
+            border-radius: 14px;
+            padding: 18px 22px;
+            max-width: 200px;
+        }
+
+        .step-num {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #C80EE7;
+            margin-bottom: 6px;
+        }
+
+        .step-text {
+            font-size: 0.88rem;
+            color: #9a80be;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo.png" alt="Prep100 Logo" class="logo" />
+    <div class="icon">🎉</div>
+    <h1>You're Registered!</h1>
+    <p>Thank you for registering with <strong>Prep100</strong>. Our team will contact you within 2 hours on WhatsApp to
+        share your free demo class link.</p>
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">Check WhatsApp for your demo link</div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">Attend your FREE demo class</div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">Enroll & start your JNV prep!</div>
+        </div>
+    </div>
+    <a href="index.html" class="btn">← Back to Prep100</a>
+</body>
+
+</html>
