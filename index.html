@@ -4,17 +4,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prep100 – Smart Online Coaching for JNV Entrance Exam</title>
+  <title>Prep100: Navodaya & Sainik 2027 Free Masterclass & Demo Session</title>
   <meta name="description"
-    content="Prep100 is India's premium online coaching platform for JNV (Navodaya Vidyalaya) Entrance Exam. Live classes, mock tests, study materials, and expert guidance for Class 6 and Class 9 preparation." />
-  <meta name="keywords"
-    content="JNV entrance exam, Navodaya coaching, Class 6 entrance, JNV Class 9, online coaching, Prep100" />
+    content="नवंबर 2027 सिलेक्शन के लिए अहम सेशन: Prep100 के साथ जानें कैसे सही तैयारी करके आपका बच्चा भारत के सर्वश्रेष्ठ स्कूलों में अपनी जगह बना सकता है।" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Added to ensure centering as requested by the user */
+    .features-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 24px;
+    }
+    .feature-card {
+      text-align: center !important;
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+    .stat-card {
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 250px;
+      max-width: 320px;
+    }
+    .stats-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 24px;
+    }
+    .stat-label {
+      text-align: center !important;
+    }
+    .footer-brand {
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .footer-logo-wrap {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
+    .footer-links-col {
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .footer-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .footer-desc {
+      text-align: center !important;
+      margin: 16px auto !important;
+    }
+    .footer-bottom-inner {
+      text-align: center !important;
+      justify-content: center !important;
+    }
+    
+    /* Hero Slideshow */
+    .hero-slideshow {
+      height: 420px;
+      width: 100%;
+      position: relative;
+    }
+    .hero-slideshow img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 20px;
+      opacity: 0;
+      animation: crossfade 6s infinite;
+    }
+    .hero-slideshow img:nth-child(1) { animation-delay: 0s; }
+    .hero-slideshow img:nth-child(2) { animation-delay: 1.5s; }
+    .hero-slideshow img:nth-child(3) { animation-delay: 3s; }
+    .hero-slideshow img:nth-child(4) { animation-delay: 4.5s; }
+
+    @keyframes crossfade {
+      0% { opacity: 0; transform: scale(1.02); }
+      5% { opacity: 1; transform: scale(1); }
+      20% { opacity: 1; transform: scale(1); }
+      30% { opacity: 0; transform: scale(0.98); }
+      100% { opacity: 0; }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,18 +119,17 @@
     <div class="nav-container">
       <div class="nav-brand">
         <a href="#home" class="logo-wrap">
-          <img src="logo.png" alt="Prep100 – JNV + SSS Coaching Logo" class="nav-logo-img" />
+          <img src="logo.png" alt="Prep100 Logo - Navodaya + Sainik School Coaching" class="nav-logo-img" />
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#courses" class="nav-link">Courses</a></li>
-        <li><a href="#stats" class="nav-link">Results</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home (होम)</a></li>
+        <li><a href="#strategy" class="nav-link">Roadmap (रोडमैप)</a></li>
+        <li><a href="#opportunity" class="nav-link">Mistakes (गलतियां)</a></li>
+        <li><a href="#system" class="nav-link">Prep100 System</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#register" class="btn btn-primary pulse-btn" id="navRegisterBtn">Register Free</a>
+        <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary pulse-btn" id="navRegisterBtn" target="_blank">💬 Book Free Demo Class</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -57,490 +151,190 @@
       <div class="hero-content" data-aos>
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          🏆 India's #1 JNV & SSS Entrance Coaching Platform
+          🚨 Only For Serious Parents & Students - Exam 2027
         </div>
         <h1 class="hero-title">
-          Prep100 – Smart Online Coaching for<br />
-          <span class="gradient-text">JNV & Sainik Schools</span>
+          90% बच्चे Selection क्यों गँवा देते हैं?<br />
+          <span class="gradient-text">Find Out in This Free Masterclass!</span>
         </h1>
         <p class="hero-subtitle">
-          Live interactive classes, full syllabus coverage, AI-powered mock tests, recorded lessons, and expert
-          faculty — everything your child needs to crack the entrance test.
+          यह 60 minutes का FREE Live Demo Session आपके बच्चे का Future तय कर सकता है। जानिए Prep100 के Topper बच्चे Navodaya और Sainik School 2027 के लिए अभी से कैसे स्मार्ट तैयारी कर रहे हैं—और आप कहाँ बड़ी गलती कर रहे हैं। 
         </p>
         <div class="hero-features-row">
-          <div class="hero-feat"><span class="feat-icon">✔</span> Live Classes</div>
-          <div class="hero-feat"><span class="feat-icon">✔</span> 200+ Video Lessons</div>
-          <div class="hero-feat"><span class="feat-icon">✔</span> 100+ Mock Tests</div>
-          <div class="hero-feat"><span class="feat-icon">✔</span> Doubt Sessions</div>
+          <div class="hero-feat"><span class="feat-icon">🔥</span> The Real Truth of Selection</div>
+          <div class="hero-feat"><span class="feat-icon">⏳</span> Limited Seats Available</div>
+          <div class="hero-feat"><span class="feat-icon">✅</span> Mandatory Attendance required</div>
         </div>
         <div class="hero-cta-group">
-          <a href="#register" class="btn btn-primary btn-lg">🚀 Register for Prep100 Course</a>
-          <a href="#courses" class="btn btn-ghost btn-lg">View Courses →</a>
+          <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary btn-lg" target="_blank">🚀 Reserve Your Live Session Seat</a>
         </div>
-        <div class="hero-trust">
-          <div class="trust-avatars">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Abhi" alt="Student" class="trust-avatar" />
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Priya" alt="Student" class="trust-avatar" />
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Rohan" alt="Student" class="trust-avatar" />
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Anjali" alt="Student" class="trust-avatar" />
-          </div>
-          <span class="trust-text"><strong>10,000+</strong> happy students already enrolled</span>
+        <div style="margin-top: 15px; color: #fff; font-size: 0.9rem; font-weight: 500;">
+            ⚠️ Note: अगर आप सच में Serious नहीं हैं, तो कृपया Register न करें। Prep100 केवल उन बच्चों को Train करता है जो असल में Selection चाहते हैं!
         </div>
       </div>
       <div class="hero-visual" data-aos data-aos-delay="200">
-        <div class="hero-image-wrap">
-          <img src="hero.png" alt="Student learning online with Prep100" class="hero-img" />
-          <div class="hero-card card-float-1">
-            <span class="card-icon">🎯</span>
-            <div>
-              <div class="card-title">Exam Ready</div>
-              <div class="card-sub">Full Syllabus Coverage</div>
-            </div>
-          </div>
-          <div class="hero-card card-float-2">
-            <span class="card-icon">📈</span>
-            <div>
-              <div class="card-title">95% Pass Rate</div>
-              <div class="card-sub">Last Batch Result</div>
-            </div>
-          </div>
-          <div class="hero-card card-float-3">
-            <span class="card-icon">⭐</span>
-            <div>
-              <div class="card-title">4.9 / 5</div>
-              <div class="card-sub">Student Rating</div>
-            </div>
-          </div>
+        <div class="hero-slideshow">
+          <img src="image.png" alt="Student Activity">
+          <img src="image copy.png" alt="Student Activity">
+          <img src="image copy 2.png" alt="Student Activity">
+          <img src="image copy 3.png" alt="Student Activity">
         </div>
-      </div>
-    </div>
-    <!-- Countdown timer banner -->
-    <div class="countdown-banner">
-      <div class="container countdown-inner">
-        <span class="countdown-label">🔥 New Batch Starting In:</span>
-        <div class="countdown-timer" id="countdown">
-          <div class="time-block"><span id="cd-days">00</span><label>Days</label></div>
-          <span class="sep">:</span>
-          <div class="time-block"><span id="cd-hrs">00</span><label>Hours</label></div>
-          <span class="sep">:</span>
-          <div class="time-block"><span id="cd-min">00</span><label>Mins</label></div>
-          <span class="sep">:</span>
-          <div class="time-block"><span id="cd-sec">00</span><label>Secs</label></div>
-        </div>
-        <a href="#register" class="btn btn-sm btn-white">Grab Your Seat →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FEATURES ===================== -->
-  <section class="section features" id="features">
+  <!-- ===================== CAMPUS SCROLLER ===================== -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container" style="margin-top: 10px; padding-bottom: 80px;">
+      <div class="section-header" data-aos style="margin-bottom: 30px;">
+        <h2 class="section-title" style="font-size: 2rem;">Real Action & <span class="gradient-text">Testimonials</span></h2>
+        <p class="section-sub">Experience the discipline and environment of JNV and Sainik Schools firsthand.</p>
+      </div>
+      <div class="video-grid" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; max-width: 900px; margin: 0 auto;">
+        
+        <!-- Local MP4 1 (9:16) -->
+        <div class="video-card" data-aos data-aos-delay="100" style="flex: 1 1 300px; max-width: 380px; background: rgba(255,255,255,0.03); padding: 16px; border-radius: 20px; border: 1px solid rgba(200, 14, 231, 0.2); transition: transform 0.3s;">
+          <div style="aspect-ratio: 9 / 16; position: relative; overflow: hidden; border-radius: 14px; background: #000;">
+            <video controls autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 14px;">
+              <source src="WhatsApp Video 2026-04-04 at 17.22.14.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Local MP4 2 (9:16) -->
+        <div class="video-card" data-aos data-aos-delay="200" style="flex: 1 1 300px; max-width: 380px; background: rgba(255,255,255,0.03); padding: 16px; border-radius: 20px; border: 1px solid rgba(200, 14, 231, 0.2); transition: transform 0.3s;">
+          <div style="aspect-ratio: 9 / 16; position: relative; overflow: hidden; border-radius: 14px; background: #000;">
+             <video controls autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 14px;">
+              <source src="VID_20260403_174352_clean.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POLL 1 ===================== -->
+  <section class="section features" id="strategy">
     <div class="container">
       <div class="section-header" data-aos>
-        <span class="section-label">Why Choose Prep100?</span>
-        <h2 class="section-title">Everything You Need to <span class="gradient-text">Crack Your Exam</span></h2>
-        <p class="section-sub">Our platform is built specifically for aspirants with tools and resources designed for success.</p>
+        <span class="section-label">हकीकत (The Reality Check)</span>
+        <h2 class="section-title">Is your child really preparing… <span class="gradient-text">या सिर्फ पढ़ रहा है?</span></h2>
+        <p class="section-sub">कड़वा सच: Without proper direction, बच्चा दिन भर किताबे खोल कर बैठे रहे, लेकिन Selection हाथ नहीं आता। (Preparation without direction leads to definite failure.)</p>
+        <div style="margin-top: 20px;">
+          <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">Attend Live Session & Know the Truth</a>
+        </div>
       </div>
       <div class="features-grid">
-        <div class="feature-card" data-aos data-aos-delay="0">
-          <div class="feat-icon-wrap" style="--icon-color: #C80EE7">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="40" height="28" rx="4" fill="url(#f1)" opacity="0.15" />
-              <rect x="4" y="8" width="40" height="28" rx="4" stroke="url(#f1)" stroke-width="2" />
-              <circle cx="24" cy="22" r="6" fill="url(#f1)" opacity="0.8" />
-              <path d="M20 22l4-3 4 3-4 3-4-3z" fill="#fff" />
-              <path d="M16 40h16" stroke="url(#f1)" stroke-width="2" stroke-linecap="round" />
-              <defs>
-                <linearGradient id="f1" x1="4" y1="8" x2="44" y2="36" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Live Interactive Classes</h3>
-          <p>Learn in real-time with expert faculty through our high-quality live sessions. Ask doubts instantly and get
-            personalized attention.</p>
-          <div class="feat-tag">Daily Classes &amp; Weekend Batches</div>
+        <div class="feature-card" data-aos>
+          <h3>सिर्फ रोज़ाना पढ़ना (Average Approach)</h3>
+          <p>अक्सर बच्चे रोज़ शाम को किताबें खोलकर बैठते हैं — लेकिन Syllabus क्या है, कैसे पढ़ना है, यह न पता होने से Selection छूट जाता है।</p>
         </div>
-        <div class="feature-card" data-aos data-aos-delay="100">
-          <div class="feat-icon-wrap" style="--icon-color: #D513F0">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="4" width="32" height="40" rx="4" fill="url(#f2)" opacity="0.15" />
-              <rect x="8" y="4" width="32" height="40" rx="4" stroke="url(#f2)" stroke-width="2" />
-              <path d="M16 16h16M16 22h16M16 28h10" stroke="url(#f2)" stroke-width="2" stroke-linecap="round" />
-              <circle cx="34" cy="30" r="6" fill="url(#f2)" opacity="0.9" />
-              <path d="M32 30l1.5 1.5 2.5-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <defs>
-                <linearGradient id="f2" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Full Syllabus Coverage</h3>
-          <p>Comprehensive coverage of all topics — Mental Ability, Arithmetic, Language — with structured
-            chapter-wise progressions.</p>
-          <div class="feat-tag">JNV &amp; Sainik Syllabus</div>
-        </div>
-        <div class="feature-card" data-aos data-aos-delay="200">
-          <div class="feat-icon-wrap" style="--icon-color: #a00bc7">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="4" width="40" height="40" rx="6" fill="url(#f3)" opacity="0.15" />
-              <rect x="4" y="4" width="40" height="40" rx="6" stroke="url(#f3)" stroke-width="2" />
-              <path d="M12 36V28M20 36V20M28 36V24M36 36V16" stroke="url(#f3)" stroke-width="3"
-                stroke-linecap="round" />
-              <circle cx="36" cy="12" r="3" fill="url(#f3)" />
-              <defs>
-                <linearGradient id="f3" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Mock Tests &amp; Analytics</h3>
-          <p>100+ pattern mock tests with detailed performance analytics, section-wise analysis, and AI-driven
-            improvement suggestions.</p>
-          <div class="feat-tag">AI-Powered Score Analysis</div>
-        </div>
-        <div class="feature-card" data-aos data-aos-delay="300">
-          <div class="feat-icon-wrap" style="--icon-color: #C80EE7">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="10" width="36" height="28" rx="4" fill="url(#f4)" opacity="0.15" />
-              <rect x="6" y="10" width="36" height="28" rx="4" stroke="url(#f4)" stroke-width="2" />
-              <path d="M14 10V6M34 10V6" stroke="url(#f4)" stroke-width="2" stroke-linecap="round" />
-              <path d="M6 20h36" stroke="url(#f4)" stroke-width="1.5" />
-              <path d="M16 28h16M20 33h8" stroke="url(#f4)" stroke-width="2" stroke-linecap="round" />
-              <defs>
-                <linearGradient id="f4" x1="6" y1="10" x2="42" y2="38" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Study Materials &amp; Worksheets</h3>
-          <p>Downloadable PDFs, worksheets, formula sheets, and previous year papers curated by exam experts for
-            every topic.</p>
-          <div class="feat-tag">200+ Printable Resources</div>
-        </div>
-        <div class="feature-card" data-aos data-aos-delay="400">
-          <div class="feat-icon-wrap" style="--icon-color: #D513F0">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="18" fill="url(#f5)" opacity="0.15" />
-              <circle cx="24" cy="24" r="18" stroke="url(#f5)" stroke-width="2" />
-              <path d="M24 16v8l5 5" stroke="url(#f5)" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <defs>
-                <linearGradient id="f5" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Recorded Class Library</h3>
-          <p>Access 200+ recorded video lessons anytime, anywhere. Rewatch important topics, learn at your own pace — on
-            any device.</p>
-          <div class="feat-tag">Lifetime Access Included</div>
-        </div>
-        <div class="feature-card" data-aos data-aos-delay="500">
-          <div class="feat-icon-wrap" style="--icon-color: #a00bc7">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" fill="url(#f6)" opacity="0.15" />
-              <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="url(#f6)" stroke-width="2" />
-              <path d="M16 24l6 6 10-12" stroke="url(#f6)" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <defs>
-                <linearGradient id="f6" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#C80EE7" />
-                  <stop offset="1" stop-color="#D513F0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h3>Expert Faculty Guidance</h3>
-          <p>Learn from handpicked educators with 10+ years of coaching experience. Dedicated doubt-clearing and
-            mentorship sessions.</p>
-          <div class="feat-tag">1-on-1 Doubt Sessions Available</div>
+        <div class="feature-card" data-aos>
+          <h3>रणनीति से तैयारी (Prep100 Topper's Approach)</h3>
+          <p>Top Students हमेशा एक 'Systematic Plan' फॉलो करते हैं। इसी 'Secret System' का खुलासा हम हमारे Free Demo Session में करने वाले हैं।</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== COURSES ===================== -->
-  <section class="section courses" id="courses">
-    <div class="container">
-      <div class="section-header" data-aos>
-        <span class="section-label">Our Courses</span>
-        <h2 class="section-title">Choose Your <span class="gradient-text">Path to Success</span></h2>
-        <p class="section-sub">Structured courses specifically designed for JNV and Sainik School entrance exams.</p>
-      </div>
-      <div class="courses-grid">
-        <!-- Course 1 -->
-        <div class="course-card" data-aos>
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80&auto=format&fit=crop"
-              alt="JNV 6th Program" />
-            <div class="course-badge">Most Popular</div>
-            <div class="course-level">JNV 6th</div>
-          </div>
-          <div class="course-body">
-            <h3>JNV 6th Entrance Preparation</h3>
-            <p class="course-desc">Complete preparation program for Class 5 students targeting JNV Class 6 admission.
-            </p>
-            <ul class="course-topics">
-              <li>✅ Mental Ability Test (MAT)</li>
-              <li>✅ Arithmetic / Mathematics</li>
-              <li>✅ Language Test (Hindi/English)</li>
-              <li>✅ Previous Year Papers</li>
-              <li>✅ Full Mock Test Series</li>
-              <li>✅ Study Material Kit</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 6 Months</div>
-              <div class="course-detail"><span>🎥</span> 120 Videos</div>
-              <div class="course-detail"><span>📝</span> 60 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-        <!-- Course 2 -->
-        <div class="course-card featured-course" data-aos data-aos-delay="150">
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&q=80&auto=format&fit=crop"
-              alt="SSS 6th Program" />
-            <div class="course-badge badge-gold">Recommended</div>
-            <div class="course-level">SSS 6th</div>
-          </div>
-          <div class="course-body">
-            <h3>SSS 6th Entrance Preparation</h3>
-            <p class="course-desc">Comprehensive coaching for Sainik School Class 6 entrance exam (AISSEE).</p>
-            <ul class="course-topics">
-              <li>✅ Mathematics & Intelligence</li>
-              <li>✅ General Knowledge (GK)</li>
-              <li>✅ Language mastery</li>
-              <li>✅ Previous Year Analysis</li>
-              <li>✅ 80+ Full Mock Tests</li>
-              <li>✅ Mock Interviews</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 9 Months</div>
-              <div class="course-detail"><span>🎥</span> 180 Videos</div>
-              <div class="course-detail"><span>📝</span> 80 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-        <!-- Course 3 -->
-        <div class="course-card" data-aos data-aos-delay="300">
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&q=80&auto=format&fit=crop"
-              alt="JNV Crash Course" />
-            <div class="course-badge badge-red">Limited Seats</div>
-            <div class="course-level">Crash Course</div>
-          </div>
-          <div class="course-body">
-            <h3>JNV Crash course 6th</h3>
-            <p class="course-desc">Intensive 90-day crash course for JNV Class 6 aspirants for a last-minute boost.</p>
-            <ul class="course-topics">
-              <li>✅ High-yield Topic Focus</li>
-              <li>✅ Daily Practice Papers</li>
-              <li>✅ Speed &amp; Accuracy Training</li>
-              <li>✅ Revision Notes</li>
-              <li>✅ 40+ Full Mock Tests</li>
-              <li>✅ Live Doubt Sessions</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 3 Months</div>
-              <div class="course-detail"><span>🎥</span> 80 Videos</div>
-              <div class="course-detail"><span>📝</span> 40 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-        <!-- Course 4 -->
-        <div class="course-card" data-aos data-aos-delay="400">
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80&auto=format&fit=crop"
-              alt="SSS Crash Course" />
-            <div class="course-badge badge-red">Fast Track</div>
-            <div class="course-level">Crash Course</div>
-          </div>
-          <div class="course-body">
-            <h3>SSS Crash course 6th</h3>
-            <p class="course-desc">Intensive 90-day crash course for Sainik School Class 6 aspirants.</p>
-            <ul class="course-topics">
-              <li>✅ AISSEE Core Focus</li>
-              <li>✅ Daily Practice Papers</li>
-              <li>✅ GK Revision Notes</li>
-              <li>✅ Mock Test Series</li>
-              <li>✅ Live Doubt Clearing</li>
-              <li>✅ Previous Year Papers</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 3 Months</div>
-              <div class="course-detail"><span>🎥</span> 90 Videos</div>
-              <div class="course-detail"><span>📝</span> 45 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-        <!-- Course 5 -->
-        <div class="course-card" data-aos data-aos-delay="500">
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80&auto=format&fit=crop"
-              alt="JNV 9th Lateral" />
-            <div class="course-level">Class 9 entry</div>
-          </div>
-          <div class="course-body">
-            <h3>JNV 9th Lateral Entry Preparation</h3>
-            <p class="course-desc">Coaching for Class 8 students targeting JNV Class 9 Lateral Entry admission.</p>
-            <ul class="course-topics">
-              <li>✅ Mathematics (Full)</li>
-              <li>✅ Science Concepts</li>
-              <li>✅ English & Hindi</li>
-              <li>✅ Topic-wise Analytics</li>
-              <li>✅ Weekly Mock Tests</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 1 Year</div>
-              <div class="course-detail"><span>🎥</span> 200 Videos</div>
-              <div class="course-detail"><span>📝</span> 70 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-        <!-- Course 6 -->
-        <div class="course-card" data-aos data-aos-delay="600">
-          <div class="course-thumb">
-            <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=500&q=80&auto=format&fit=crop"
-              alt="SSS 9th Lateral" />
-            <div class="course-level">Class 9 entry</div>
-          </div>
-          <div class="course-body">
-            <h3>SSS 9th Lateral Entry Preparation</h3>
-            <p class="course-desc">Complete guidance for Sainik School Class 9 entrance examination.</p>
-            <ul class="course-topics">
-              <li>✅ Science & Social</li>
-              <li>✅ Advanced Maths</li>
-              <li>✅ Intelligence Test</li>
-              <li>✅ English Proficiency</li>
-              <li>✅ Daily Practice Sets</li>
-            </ul>
-            <div class="course-meta">
-              <div class="course-detail"><span>📅</span> 1 Year</div>
-              <div class="course-detail"><span>🎥</span> 220 Videos</div>
-              <div class="course-detail"><span>📝</span> 75 Mock Tests</div>
-            </div>
-            <a href="#register" class="btn btn-primary btn-block">Enroll Now →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== STATS ===================== -->
-  <section class="section stats-section" id="stats">
+  <!-- ===================== WHY IT IS SERIOUS ===================== -->
+  <section class="section stats-section">
     <div class="stats-bg"></div>
     <div class="container">
       <div class="section-header" data-aos>
-        <span class="section-label">Our Impact</span>
-        <h2 class="section-title">Numbers That Speak for <span class="gradient-text">Themselves</span></h2>
+        <h2 class="section-title">Why Parents <span class="gradient-text">Can't Afford to Miss This Live Session?</span></h2>
+        <p class="section-sub" style="color:white;">Register करके Session न देखना आपके बच्चे के Selection Process पर भारी पड़ सकता है!</p>
       </div>
       <div class="stats-grid">
-        <div class="stat-card" data-aos data-aos-delay="0">
-          <div class="stat-icon">🎓</div>
-          <div class="stat-num" data-target="10000">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Students Learning</div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">⚠️</div>
+          <div class="stat-label">लाखों बच्चे रेस में हैं: आप अकेले नहीं हैं। हर सीट पर 50 से ज़्यादा दावेदार हैं (High Competition)।</div>
         </div>
-        <div class="stat-card" data-aos data-aos-delay="100">
-          <div class="stat-icon">🎥</div>
-          <div class="stat-num" data-target="200">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Video Lessons</div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">🕒</div>
+          <div class="stat-label">समय तेज़ी से बीत रहा है: तैयारी आज शुरू नहीं की, तो Syllabus कभी पूरा नहीं होगा।</div>
         </div>
-        <div class="stat-card" data-aos data-aos-delay="200">
-          <div class="stat-icon">📝</div>
-          <div class="stat-num" data-target="100">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Mock Tests</div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">💡</div>
+          <div class="stat-label">गलत तरीका = 100% रिजेक्शन: यह Session आपको उन Blunders से बचाएगा जो 90% बच्चे करते हैं।</div>
         </div>
-        <div class="stat-card" data-aos data-aos-delay="300">
-          <div class="stat-icon">⭐</div>
-          <div class="stat-num" data-target="95">0</div>
-          <div class="stat-plus">%</div>
-          <div class="stat-label">Satisfaction Rate</div>
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-white btn-sm" target="_blank">Connect on WhatsApp for Live Link</a>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== LIFE CHANGING OPPORTUNITY ===================== -->
+  <section class="section courses" id="opportunity">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-label">Real Impact (असली फायदा)</span>
+        <h2 class="section-title">क्या दांव पर लगा है? <span class="gradient-text">(Life-Changing Opportunity)</span></h2>
+        <p class="section-sub">एक बार Admission हो गया, तो बच्चे का पूरा Future Secure हो जाएगा। JNV और Sainik School सिर्फ स्कूल नहीं, ये Leaders बनाने की फैक्ट्री हैं:</p>
+      </div>
+      <div class="courses-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="course-card" data-aos>
+          <div class="course-body">
+            <h3>Completely Free Education</h3>
+            <p class="course-desc">परिवार के लिए बिलकुल Zero Cost पर World-class Residential शिक्षा!</p>
+          </div>
         </div>
-        <div class="stat-card" data-aos data-aos-delay="400">
-          <div class="stat-icon">👨‍🏫</div>
-          <div class="stat-num" data-target="50">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Expert Educators</div>
+        <div class="course-card" data-aos>
+          <div class="course-body">
+            <h3>Top-Tier Career Pathway</h3>
+            <p class="course-desc">IITs, NITs, Armed Forces (NDA) और Top Careers के सीधे दरवाजे खुलते हैं।</p>
+          </div>
         </div>
-        <div class="stat-card" data-aos data-aos-delay="500">
-          <div class="stat-icon">🏆</div>
-          <div class="stat-num" data-target="5000">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Students Selected</div>
+        <div class="course-card" data-aos>
+          <div class="course-body">
+            <h3>Unmatched Environment</h3>
+            <p class="course-desc">भारत के सबसे होनहार (Brightest) स्टूडेंट्स के साथ 24/7 Growth का माहौल।</p>
+          </div>
         </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">Live Session में Complete Roadmap समझें</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== BENEFITS ===================== -->
-  <section class="section benefits" id="benefits">
+  <!-- ===================== WHY MOST STUDENTS FAIL ===================== -->
+  <section class="section benefits">
     <div class="container">
       <div class="benefits-inner">
         <div class="benefits-left" data-aos>
-          <span class="section-label">Why Prep100?</span>
-          <h2 class="section-title">Unmatched Benefits for <span class="gradient-text">Every Student</span></h2>
-          <p class="section-sub">Prep100 is built on the belief that every child deserves access to quality
-            coaching, regardless of location or background.</p>
-          <a href="#register" class="btn btn-primary">Start Free Today →</a>
+          <span class="section-label">Common Pitfalls (बड़ी गलतियां)</span>
+          <h2 class="section-title">बच्चे <span class="gradient-text">JNV-SSS Exam में क्यों फेल होते हैं?</span></h2>
+          <p class="section-sub">एग्जाम क्लियर करना Impossible नहीं है — लेकिन ज्यादातर बच्चे बिना Roadmap के एग्जाम देते हैं। हमारे Live Session में जानिए कि इन गलतियों से कैसे बचना है:</p>
+          <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">Register for Free Demo Session</a>
         </div>
         <div class="benefits-right">
-          <div class="benefit-item" data-aos data-aos-delay="0">
-            <div class="benefit-icon">🌏</div>
+          <div class="benefit-item" data-aos>
+            <div class="benefit-icon">❌</div>
             <div>
-              <h4>Flexible Online Learning</h4>
-              <p>Study from home, anywhere in India. No commute, no hassle — just focused exam prep at your convenience.
-              </p>
+              <h4>No Structured Plan (प्लानिंग की कमी)</h4>
+              <p>Random Topics पढ़ने से जो सबसे जरूरी Concepts हैं, वही छूट जाते हैं।</p>
             </div>
           </div>
-          <div class="benefit-item" data-aos data-aos-delay="100">
-            <div class="benefit-icon">👩‍🏫</div>
+          <div class="benefit-item" data-aos>
+            <div class="benefit-icon">❌</div>
             <div>
-              <h4>Expert Faculty Guidance</h4>
-              <p>Our educators have 10+ years of coaching experience with proven track records of student
-                selections.</p>
+              <h4>Self-Study Without Guidance</h4>
+              <p>Self-Study अच्छी है, लेकिन बिना Mentor के गलतियां बार-बार Repeat होती हैं।</p>
             </div>
           </div>
-          <div class="benefit-item" data-aos data-aos-delay="200">
-            <div class="benefit-icon">📊</div>
+          <div class="benefit-item" data-aos>
+            <div class="benefit-icon">❌</div>
             <div>
-              <h4>Regular Practice Tests</h4>
-              <p>Weekly tests, daily quizzes, and full mock exams keep students exam-ready and build confidence over
-                time.</p>
+              <h4>Poor Time Management</h4>
+              <p>बच्चे को Answers आते हैं, लेकिन वो Paper टाइम पर पूरा नहीं कर पाता (Missing Speed & Accuracy)।</p>
             </div>
           </div>
-          <div class="benefit-item" data-aos data-aos-delay="300">
-            <div class="benefit-icon">📱</div>
+          <div class="benefit-item" data-aos>
+            <div class="benefit-icon">❌</div>
             <div>
-              <h4>Access on Any Device</h4>
-              <p>Study on mobile, tablet, or PC. Our platform is fully responsive and works on all devices, even in low
-                internet areas.</p>
-            </div>
-          </div>
-          <div class="benefit-item" data-aos data-aos-delay="400">
-            <div class="benefit-icon">🔒</div>
-            <div>
-              <h4>Safe Learning Environment</h4>
-              <p>A moderated, distraction-free platform designed specifically for young learners with parental oversight
-                features.</p>
+              <h4>Starting Too Late (देरी से शुरुआत)</h4>
+              <p>Last के 3 महीने में Crash Course खोजने वाले अक्सर बहुत पीछे रह जाते हैं।</p>
             </div>
           </div>
         </div>
@@ -548,236 +342,124 @@
     </div>
   </section>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="section testimonials" id="testimonials">
+  <!-- ===================== HOW COMPETITIVE IT IS ===================== -->
+  <section class="section testimonials">
     <div class="container">
       <div class="section-header" data-aos>
-        <span class="section-label">Student Success Stories</span>
-        <h2 class="section-title">What Our Students &amp; Parents <span class="gradient-text">Say About Us</span></h2>
+        <h2 class="section-title">Don't Take it Lightly: <span class="gradient-text">तगड़ा कॉम्पिटिशन</span></h2>
+        <p class="section-sub">यह सब से होशियार होने के बारे में नहीं है — यह उस बच्चे के बारे में है जो सबसे Smart Preparation करता है। Prep100 gives you that edge!</p>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card" data-aos data-aos-delay="0">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"My daughter was struggling with MAT section but after joining Prep100's live
-            classes, she scored 97 percentile. The faculty is incredibly patient and the mock tests are exactly the exam
-            pattern. Highly recommended!"</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Parent1" alt="Parent of Sneha"
-              class="author-avatar" />
-            <div>
-              <div class="author-name">Ramesh Sharma</div>
-              <div class="author-role">Parent of Sneha (Selected in JNV)</div>
-            </div>
-          </div>
+        <div class="testimonial-card" data-aos>
+          <div class="stars">26L+ Total Applicants</div>
+          <p class="testimonial-text">हर साल 26 लाख से भी ज्यादा बच्चे पूरे भारत से इस Entrance Exam में बैठते हैं।</p>
         </div>
-        <div class="testimonial-card" data-aos data-aos-delay="100">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"I prepared for entrance with Prep100. The recorded videos helped
-            me study during vacations and I cleared the exam in my first attempt! The study material is the best I've
-            seen."</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Ankit22" alt="Ankit Singh"
-              class="author-avatar" />
-            <div>
-              <div class="author-name">Ankit Singh</div>
-              <div class="author-role">Selected Student</div>
-            </div>
-          </div>
+        <div class="testimonial-card" data-aos>
+          <div class="stars">Only 46K Available Seats</div>
+          <p class="testimonial-text">सीटें बहुत Limited हैं। Rejection Rate 98% से भी ज्यादा है!</p>
         </div>
-        <div class="testimonial-card" data-aos data-aos-delay="200">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The crash course was a game changer. Just 90 days before exam, my son's score
-            jumped from 65% to 88% in mock tests. The doubt sessions are amazing — teachers are available and very
-            helpful!"</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Geeta" alt="Geeta Devi" class="author-avatar" />
-            <div>
-              <div class="author-name">Geeta Devi</div>
-              <div class="author-role">Parent of Rohan (Selected)</div>
-            </div>
-          </div>
+        <div class="testimonial-card" data-aos>
+          <div class="stars">Prep100 - Top 2% Strategy</div>
+          <p class="testimonial-text">सिर्फ Top 2% ही Select होंगे। क्या आपका बच्चा उन 2% में है? Masterclass में खुद जांचें।</p>
         </div>
-        <div class="testimonial-card" data-aos data-aos-delay="300">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Prep100's mock tests are the closest to the actual exam. I took 50+ mocks and
-            by the end I was so confident. Got selected in my first attempt. Best investment my parents made!"</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Priyanka9" alt="Priyanka Verma"
-              class="author-avatar" />
-            <div>
-              <div class="author-name">Priyanka Verma</div>
-              <div class="author-role">Selected Student</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card" data-aos data-aos-delay="400">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The teachers explain concepts so clearly even my son understood
-            everything. He watched videos multiple times whenever he had doubts. Prep100 made learning fun and
-            effective."</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Vinod" alt="Vinod Kumar" class="author-avatar" />
-            <div>
-              <div class="author-name">Vinod Kumar</div>
-              <div class="author-role">Parent of Aditya (Selected)</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card" data-aos data-aos-delay="500">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Affordable, quality coaching that actually works! We're from a small town and
-            couldn't afford big coaching centres. Prep100 gave my daughter the same quality at a fraction of the cost."</p>
-          <div class="testimonial-author">
-            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Maya7" alt="Maya Patel" class="author-avatar" />
-            <div>
-              <div class="author-name">Maya Patel</div>
-              <div class="author-role">Parent of Riya (Selected)</div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">Understand the Top 2% Strategy Live</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== REGISTER CTA ===================== -->
-  <section class="section cta-section" id="register">
+  <!-- ===================== WHAT YOU WILL LEARN ===================== -->
+  <section class="section stats-section" id="system">
+    <div class="stats-bg"></div>
+    <div class="container">
+      <div class="section-header" data-aos>
+        <h2 class="section-title">इस 60-Minute Free Demo Session में आप <span class="gradient-text">क्या सीखेंगे?</span></h2>
+        <p class="section-sub" style="color:white;">"Prep100 में हम आपको केवल Coaching नहीं देते; हम आपको एक Success 'System' देते हैं।"</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">📚</div>
+          <div class="stat-label">सटीक सिलेबस और पेपर पैटर्न की डीप एनालिसिस (Syllabus & Pattern Deep Analysis)</div>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">🎯</div>
+          <div class="stat-label">Daily & Weekly स्टडी प्लान कैसे बनाएं? (How to create a winning Schedule)</div>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">📊</div>
+          <div class="stat-label">वीकनेस (कमियों) को पहचानकर उसे मार्क्स में कैसे बदलें? (Convert Weaknesses into High Scores)</div>
+        </div>
+        <div class="stat-card" data-aos>
+          <div class="stat-icon">🤝</div>
+          <div class="stat-label">पेरेंट्स का रोल: बच्चे की पढ़ाई को ट्रैक कैसे करें? (Parent's Role in Tracking Progress)</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-white" target="_blank">Book Your Live Session Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OATH CTA ===================== -->
+  <section class="section cta-section">
     <div class="cta-bg-shapes">
       <div class="cta-shape cta-shape-1"></div>
       <div class="cta-shape cta-shape-2"></div>
     </div>
     <div class="container">
-      <div class="cta-inner" data-aos>
-        <div class="cta-content">
-          <span class="section-label" style="color:#fff8;">LIMITED OFFER – ENROLL TODAY</span>
-          <h2 class="cta-title">Start Your Preparation <br /><span class="gradient-text-light">Today with
-              Prep100</span></h2>
-          <p class="cta-sub">Join 10,000+ students already on their path to success. Our expert faculty and
-            proven methods will help your child succeed.</p>
-          <div class="cta-benefits">
-            <span>✓ Free Demo Class</span>
-            <span>✓ No Hidden Charges</span>
-            <span>✓ Cancel Anytime</span>
-            <span>✓ 7-Day Free Trial</span>
-          </div>
-        </div>
-        <div class="cta-form-wrap">
-          <form class="register-form" id="registerForm" action="https://formsubmit.co/milind@koutuhal.in" method="POST">
-            <!-- FormSubmit hidden fields -->
-            <input type="hidden" name="_subject" value="New Prep100 Course Registration" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <h3>Register for Free Demo</h3>
-            <div class="form-group">
-              <input type="text" name="Student Name" placeholder="Student's Full Name" required />
-            </div>
-            <div class="form-group">
-              <input type="text" name="Parent Name" placeholder="Parent's Name" required />
-            </div>
-            <div class="form-group">
-              <input type="tel" name="WhatsApp Number" placeholder="WhatsApp Number" required pattern="[0-9]{10}" />
-            </div>
-            <div class="form-group">
-              <select name="Course" required>
-                <option value="" disabled selected>Select Course</option>
-                <option value="JNV 6th">JNV 6th</option>
-                <option value="SSS 6th">SSS 6th</option>
-                <option value="JNV Crash course 6th">JNV Crash course 6th</option>
-                <option value="SSS Crash course 6th">SSS Crash course 6th</option>
-                <option value="JNV 9th Lateral Entry">JNV 9th Lateral Entry</option>
-                <option value="SSS 9th Lateral Entry">SSS 9th Lateral Entry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select name="State" required>
-                <option value="" disabled selected>Select Your State</option>
-                <option>Uttar Pradesh</option>
-                <option>Bihar</option>
-                <option>Rajasthan</option>
-                <option>Madhya Pradesh</option>
-                <option>Maharashtra</option>
-                <option>Gujarat</option>
-                <option>Delhi</option>
-                <option>Punjab</option>
-                <option>Haryana</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">🚀 Register Now – It's
-              Free!</button>
-            <p class="form-note">✅ Free demo class on registration. No payment required.</p>
-          </form>
+      <div class="cta-inner" data-aos style="text-align:center; display:block;">
+        <div class="cta-content" style="max-width:800px; margin: 0 auto;">
+          <h2 class="cta-title">Selection की शपथ लीजिये! <br /><span class="gradient-text-light">(Take the Action Now with Prep100)</span></h2>
+          <br/>
+          <p class="cta-sub" style="font-size: 1.2rem; color: #fff; font-weight:500;">
+             "आज से, मैं यह संकल्प लेता/लेती हूँ कि मैं अपने बच्चे के Future के लिए पूरी लगन से इस Free Demo Session में शामिल होऊंगा/होऊंगी। मैं इसे मिस करके Selection का मौका नहीं गँवाऊंगा/गँवाऊंगी।"
+          </p>
+          <br/>
+          <p class="cta-sub" style="font-size: 1rem; color: rgba(255,255,255,0.8);">
+            "Just registering is not enough. Showing up makes the Champion. I take the oath to attend the Live Masterclass with my child and understand the complete selection roadmap."
+          </p>
+          <br/>
+          <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-white btn-lg pulse-btn" target="_blank" style="display:inline-block; margin-top:20px;">शपथ लें और Free Session की सीट बुक करें</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="footer-top">
       <div class="container footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo-wrap">
-            <img src="logo.png" alt="Prep100 – JNV + SSS Coaching" class="footer-logo-img" />
-            <p class="footer-desc">India's trusted online coaching platform for JNV and SSS entrance exam aspirants. Smart
-              learning for every child's bright future.</p>
-            <div class="social-links">
-              <a href="#" class="social-btn" aria-label="YouTube" title="Prep100 YouTube Channel">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.2.7 11.4v2c0 2.2.3 4.4.3 4.4s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.5 22 12 22 12 22s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2C23.3 9.2 23 7 23 7zM9.7 15.5V8.3l8.1 3.6-8.1 3.6z" />
-                </svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="WhatsApp" title="Prep100 WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4C7 7.3 6 8.3 6 10.3s1.5 3.9 1.7 4.1c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.4.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.2-.5-.3zM12.1 2C6.5 2 2 6.5 2 12.1c0 1.9.5 3.7 1.4 5.2L2 22l4.9-1.3c1.5.8 3.1 1.2 4.8 1.2h.4c5.6 0 10.1-4.5 10.1-10.1C21.9 6.5 17.7 2 12.1 2z" />
-                </svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="Instagram" title="Prep100 Instagram">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 3.9 2.3 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4A6.2 6.2 0 0012 5.8zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z" />
-                </svg>
-              </a>
-            </div>
+        <div class="footer-brand" style="width: 100%; max-width: 100%;">
+          <div class="footer-logo-wrap" style="align-items: center;">
+            <img src="logo.png" alt="Prep100 - Premium JNV & Sainik Coaching" class="footer-logo-img" />
+            <p class="footer-desc" style="max-width: 600px;">Prep100: The Complete Selection Strategy for Navodaya & Sainik 2027. यह मौका छोड़िए मत; आज ही Live Masterclass के लिए Enroll करें!</p>
           </div>
-          <div class="footer-links-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#features">Our Features</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#stats">Results</a></li>
-              <li><a href="#testimonials">Reviews</a></li>
-              <li><a href="#register">Free Demo</a></li>
-            </ul>
-          </div>
-          <div class="footer-links-col">
-            <h4>Contact Us</h4>
-            <p style="font-size:0.88rem;color:#7a6090;margin-bottom:16px;line-height:1.6;">Have a question? Get in touch
-              with our team — we're happy to help you find the right course.</p>
-            <a href="#register" class="btn btn-primary btn-sm">📩 Contact Us</a>
+          <div class="footer-links-col" style="margin-top: 20px;">
+            <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">Contact Prep100 on WhatsApp</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <p>© 2025 Prep100. All rights reserved. | Prep100 – Your Path to Success</p>
-        </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Prep100 - Navodaya & Sainik 2027 Selection Strategy. All rights reserved.</p>
       </div>
+    </div>
   </footer>
 
   <!-- ===================== FLOATING ELEMENTS ===================== -->
-  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Prep100"
+  <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching"
     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" id="whatsappBtn">
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path
         d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4C7 7.3 6 8.3 6 10.3s1.5 3.9 1.7 4.1c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.4.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.2-.5-.3zM12.1 2C6.5 2 2 6.5 2 12.1c0 1.9.5 3.7 1.4 5.2L2 22l4.9-1.3c1.5.8 3.1 1.2 4.8 1.2h.4c5.6 0 10.1-4.5 10.1-10.1C21.9 6.5 17.7 2 12.1 2z" />
     </svg>
-    <span class="whatsapp-label">Chat with Us</span>
+    <span class="whatsapp-label">फ्री डेमो बुक करें</span>
   </a>
 
   <div class="sticky-cta" id="stickyCTA">
-    <a href="#register" class="btn btn-primary">🚀 Register Now – Free Demo</a>
+    <a href="https://wa.me/919579119726?text=Hi%20I%20am%20interested%20in%20Navodaya%20%26%20Sainik%20School%20coaching" class="btn btn-primary" target="_blank">🚀 Miss मत करें! Prep100 Demo Join करें</a>
   </div>
 
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>

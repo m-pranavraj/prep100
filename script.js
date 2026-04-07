@@ -283,46 +283,8 @@ if ('IntersectionObserver' in window) {
 }
 
 // ---- GLOWING CURSOR TRAIL (desktop) ----
-if (window.innerWidth > 1024 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const trail = [];
-  const TRAIL_LENGTH = 10;
+// Cursor trail removed as requested
 
-  for (let i = 0; i < TRAIL_LENGTH; i++) {
-    const dot = document.createElement('div');
-    dot.style.cssText = `
-      position: fixed; pointer-events: none; z-index: 9998;
-      width: ${8 - i * 0.5}px; height: ${8 - i * 0.5}px;
-      background: rgba(200, 14, 231, ${0.6 - i * 0.055});
-      border-radius: 50%;
-      transition: transform 0.05s;
-      mix-blend-mode: screen;
-    `;
-    document.body.appendChild(dot);
-    trail.push({ el: dot, x: 0, y: 0 });
-  }
-
-  let mouseX = 0, mouseY = 0;
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateTrail() {
-    let x = mouseX, y = mouseY;
-    trail.forEach((dot, i) => {
-      dot.el.style.left = `${x - (8 - i * 0.5) / 2}px`;
-      dot.el.style.top = `${y - (8 - i * 0.5) / 2}px`;
-      dot.x = x;
-      dot.y = y;
-      if (i < trail.length - 1) {
-        x = x * 0.6 + trail[i + 1].x * 0.4;
-        y = y * 0.6 + trail[i + 1].y * 0.4;
-      }
-    });
-    requestAnimationFrame(animateTrail);
-  }
-  requestAnimationFrame(animateTrail);
-}
 
 console.log('%cPrep100 🚀 — Your Path to Navodaya Success', 
   'color: #C80EE7; font-size: 20px; font-weight: bold; font-family: Outfit, sans-serif;');
