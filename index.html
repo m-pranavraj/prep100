@@ -132,29 +132,24 @@
 </head>
 
 <body>
-
-  <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
+  
+  <!-- ===================== VIEW SWITCHER = :sticky ===================== -->
+  <div class="view-switcher-wrap">
+    <div class="switcher-container">
       <div class="nav-brand">
         <a href="#home" class="logo-wrap">
-          <img src="logo.png" alt="Prep100 Logo - Navodaya + Sainik School Coaching" class="nav-logo-img" />
+          <img src="logo.png" alt="Prep100 Logo" class="nav-logo-img" />
         </a>
       </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link">Home (होम)</a></li>
-        <li><a href="#strategy" class="nav-link">Roadmap (रोडमैप)</a></li>
-        <li><a href="#opportunity" class="nav-link">Mistakes (गलतियां)</a></li>
-        <li><a href="#system" class="nav-link">Prep100 System</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a href="https://wa.me/919579119726?text=नमस्ते%2C%20मुझे%20नवोदय%20और%20सैनिक%20स्कूल%20कोचिंग%20के%20बारे%20में%20जानकारी%20चाहिए" class="btn btn-primary pulse-btn" id="navRegisterBtn" target="_blank">💬 Book Free Demo Class</a>
+      <div class="view-switcher">
+        <button class="switch-btn active" id="btn-jnv" onclick="switchView('jnv')">JNV & Sainik Schools</button>
+        <button class="switch-btn" id="btn-nda" onclick="switchView('nda')">NDA & Defence Academy</button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="switcher-spacer"></div> <!-- To balance the center alignment -->
     </div>
-  </nav>
+  </div>
+
+  <main id="view-jnv">
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="home">
@@ -446,6 +441,405 @@
   </section>
 
   <!-- ===================== FOOTER ===================== -->
+  </main>
+
+  <!-- ===================== NDA / DCA VIEW ===================== -->
+  <main id="view-nda" style="display: none;">
+    <!-- NDA HERO -->
+    <section class="hero nda-hero" id="nda-home">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="orb orb-1"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content" data-aos>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            🪖 India's Elite Defence Coaching Hub
+          </div>
+          <h1 class="hero-title">
+            Prep Like a <br />
+            <span class="gradient-text">Future Officer</span>
+          </h1>
+          <p class="hero-subtitle">
+            Veteran-led academy for NDA, CDS, AFCAT, AFMC, TES and Agniveer. Structured training that blends classroom coaching, SSB mentoring and physical conditioning to help you wear the uniform with pride.
+          </p>
+          <div class="hero-features-row">
+            <div class="hero-feat"><span class="feat-icon">🎯</span> Officer–oriented training plans</div>
+            <div class="hero-feat"><span class="feat-icon">🪖</span> SSB & physical readiness focus</div>
+            <div class="hero-feat"><span class="feat-icon">📚</span> Complete written exam coverage</div>
+          </div>
+          <div class="hero-cta-group">
+            <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-lg" target="_blank">Start My Defence Journey →</a>
+            <a href="#nda-courses" class="btn btn-ghost">View All Programs</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-text">
+              <strong>4.9★</strong> Cadet Ratings | <strong>95%</strong> Selection Success
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" data-aos data-aos-delay="200">
+           <!-- DCA Branding / Logo placeholder -->
+           <div class="feature-card" style="text-align: center; padding: 40px; background: rgba(255,255,255,0.05);">
+             <h2 style="font-size: 3rem; margin-bottom: 10px;">DCA</h2>
+             <p style="font-weight: 700; color: var(--purple);">Defence Career Academy</p>
+             <p style="margin-top: 20px; font-style: italic; color: #a888cc;">Warriors in the making</p>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NDA STATS -->
+    <section class="section stats-section" id="nda-stats">
+      <div class="stats-bg"></div>
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-label">DCA IN NUMBERS</span>
+          <h2 class="section-title">Trusted by <span class="gradient-text">Thousands of Cadets</span></h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">👥</div>
+            <div class="stat-num" data-target="5000">5,000</div>
+            <div class="stat-label">Cadets Trained</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">🎯</div>
+            <div class="stat-num" data-target="95">95</div>
+            <div class="stat-label">Selection Rate %</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">⭐</div>
+            <div class="stat-num" data-target="24">24</div>
+            <div class="stat-label">Years of Legacy</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">📚</div>
+            <div class="stat-num" data-target="8">8</div>
+            <div class="stat-label">Defence Entries Covered</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">🪖</div>
+            <div class="stat-num" data-target="4">4</div>
+            <div class="stat-label">SSB Mentors</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-icon">📺</div>
+            <div class="stat-num" data-target="60">60</div>
+            <div class="stat-label">Live Sessions / Month</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NDA COURSES -->
+    <section class="section courses" id="nda-courses">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-label">OUR COURSES</span>
+          <h2 class="section-title">Choose Your <span class="gradient-text">Path to Service</span></h2>
+          <p class="section-sub">Structured defence preparation programs for written exams, SSB and physical readiness.</p>
+        </div>
+        
+        <div class="courses-grid">
+          <!-- NDA -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">2 Years</div>
+            <div class="course-body">
+              <div class="course-meta">Batch Starts: 21 April</div>
+              <h3>NDA</h3>
+              <p class="course-desc">National Defence Academy Pre-Training Course</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CDS/SSC -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">1 Year</div>
+            <div class="course-body">
+              <div class="course-meta">Regular Batches</div>
+              <h3>CDS/SSC</h3>
+              <p class="course-desc">Combined Defence Services & Staff Selection Commission</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AFCAT -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">18 Months</div>
+            <div class="course-body">
+              <div class="course-meta">Specialized Training</div>
+              <h3>AFCAT</h3>
+              <p class="course-desc">Air Force Common Admission Test Preparation</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AFMC - NEET -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">2 Years</div>
+            <div class="course-body">
+              <div class="course-meta">Medical Focus</div>
+              <h3>AFMC - NEET</h3>
+              <p class="course-desc">Armed Forces Medical College Entry</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TES - JEE -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">2 Years</div>
+            <div class="course-body">
+              <div class="course-meta">Engineering Students</div>
+              <h3>TES - JEE Entry</h3>
+              <p class="course-desc">Technical Entry Scheme for Engineers</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agniveer -->
+          <div class="course-card program-card" data-aos>
+            <div class="program-badge">6 Months</div>
+            <div class="course-body">
+              <div class="course-meta">All Branches</div>
+              <h3>Agniveer Scheme</h3>
+              <p class="course-desc">Army, Navy & Air Force Agniveer Program</p>
+              <ul class="benefit-list" style="margin: 15px 0; font-size: 0.85rem; color: #a888cc;">
+                <li>⏱️ Intensive, structured schedule</li>
+                <li>📘 Complete written exam coverage</li>
+                <li>🪖 SSB orientation & personality grooming</li>
+              </ul>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; color: var(--purple); font-weight: 700;">Defence Track</span>
+                <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-primary btn-sm">Enrol Now →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY DCA -->
+    <section class="section benefits" id="nda-why">
+      <div class="container">
+        <div class="benefits-inner">
+          <div class="benefits-left" data-aos>
+            <span class="section-label">WHY DCA</span>
+            <h2 class="section-title">Unmatched Benefits for <span class="gradient-text">Every Cadet</span></h2>
+            <p class="section-sub">Defence Career Academy is built on the belief that every motivated youngster deserves access to elite defence coaching — regardless of background.</p>
+          </div>
+          <div class="benefits-right">
+            <div class="benefit-item" data-aos>
+              <div class="benefit-icon">🎯</div>
+              <div>
+                <h4>Mission-Driven Coaching</h4>
+                <p>Awareness, guidance and complete preparation for all defence force entries with a single, unified training system.</p>
+              </div>
+            </div>
+            <div class="benefit-item" data-aos>
+              <div class="benefit-icon">⚔️</div>
+              <div>
+                <h4>Veteran-Led Mentorship</h4>
+                <p>Train under decorated officers who bring real battlefield experience into the classroom and parade ground.</p>
+              </div>
+            </div>
+            <div class="benefit-item" data-aos>
+              <div class="benefit-icon">🚀</div>
+              <div>
+                <h4>Holistic Development</h4>
+                <p>Academics, physical training and SSB personality development crafted to build officers, not just aspirants.</p>
+              </div>
+            </div>
+            <div class="benefit-item" data-aos>
+              <div class="benefit-icon">📍</div>
+              <div>
+                <h4>Structured Path to Uniform</h4>
+                <p>Clear roadmaps for NDA, CDS, AFCAT, AFMC, TES and Agniveer so cadets always know their next step.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section class="section" id="nda-mentors">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-label">EXPERT LEADERS</span>
+          <h2 class="section-title">Meet Our <span class="gradient-text">Expert Leaders</span></h2>
+          <p class="section-sub">Mentors with military expertise and proven success track records</p>
+        </div>
+        
+        <div class="mentor-grid">
+          <!-- Founder -->
+          <div class="mentor-card" data-aos>
+             <div class="mentor-avatar">SR</div>
+             <div class="mentor-role">Founder & Chief Mentor</div>
+             <h3 class="mentor-name">Colonel Sachin Randale</h3>
+             <div style="margin-bottom: 15px;">
+               <span class="badge-dot" style="background: gold;"></span> 🎖️ Shaurya Chakra 🎖️ Sena Medal
+             </div>
+             <p class="mentor-bio">
+               Highly decorated Army veteran with 24 years of elite combat experience. Pioneer of defence force training methodology serving thousands of successful recruits and officers.
+             </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 80px;">
+          <h3 style="text-align: center; margin-bottom: 40px; font-family: 'Outfit';">🎓 Academic Excellence Team</h3>
+          <div class="team-list">
+            <div class="team-item">
+              <div class="team-initials">PBP</div>
+              <div>
+                <div style="font-weight: 700;">Prof. Balaji Phulari</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">Mathematics & Science</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">PDJ</div>
+              <div>
+                <div style="font-weight: 700;">Prof. Dipti Jadhav</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">English & Communication</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">PTJ</div>
+              <div>
+                <div style="font-weight: 700;">Prof. Trupti Jadhav</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">General Studies</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">PBB</div>
+              <div>
+                <div style="font-weight: 700;">Prof. Bhagwan Biradar</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">Physical Training</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 80px;">
+          <h3 style="text-align: center; margin-bottom: 40px; font-family: 'Outfit';">🎖️ SSB Interview Mentors</h3>
+          <div class="team-list">
+            <div class="team-item">
+              <div class="team-initials">CGK</div>
+              <div>
+                <div style="font-weight: 700;">Colonel Giridhar Kole</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">SM (Veteran) | Psychology Expert</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">GCA</div>
+              <div>
+                <div style="font-weight: 700;">Group Capt. Arvind Mahadhik</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">(Veteran) | Leadership Training</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">GCS</div>
+              <div>
+                <div style="font-weight: 700;">Group Capt. S. Kulkarni</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">(Veteran) | SSB Interview</div>
+              </div>
+            </div>
+            <div class="team-item">
+              <div class="team-initials">LCH</div>
+              <div>
+                <div style="font-weight: 700;">Lt. Cdr. Himani Rawat</div>
+                <div style="font-size: 0.8rem; color: var(--purple);">(Veteran) | Strategy & Tactics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SSB MODULES -->
+    <section class="section stats-section" id="nda-ssb">
+      <div class="stats-bg"></div>
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-label">SSB TRAINING MODULES</span>
+          <h2 class="section-title">Comprehensive Prep for <span class="gradient-text">SSB Examination</span></h2>
+        </div>
+        
+        <div class="ssb-grid">
+          <div class="ssb-card" data-aos>
+            <div class="ssb-icon-box">🧠</div>
+            <div class="ssb-info">
+              <span class="duration">⏱️ 5 Days</span>
+              <h4>Psychology Module</h4>
+              <p>Understanding personality, intelligence, reasoning, and psychological factors for defence recruitment.</p>
+            </div>
+          </div>
+          <div class="ssb-card" data-aos>
+            <div class="ssb-icon-box">⚙️</div>
+            <div class="ssb-info">
+              <span class="duration">⏱️ 4 Days</span>
+              <h4>GTO Module</h4>
+              <p>Group discussions, planning exercises, outdoor tasks, and team-based activities testing leadership and teamwork.</p>
+            </div>
+          </div>
+          <div class="ssb-card" data-aos>
+            <div class="ssb-icon-box">🎤</div>
+            <div class="ssb-info">
+              <span class="duration">⏱️ 4 Days</span>
+              <h4>Interview Prep</h4>
+              <p>Personal interview preparation, communication skills, confidence building, and mock interviews.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+          <a href="https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more" class="btn btn-white btn-lg pulse-btn" target="_blank">Start My Defence Journey Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="footer-top">
       <div class="container footer-grid">

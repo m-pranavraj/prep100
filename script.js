@@ -2,17 +2,12 @@
    PREP100 — JavaScript Interactions
    ========================================= */
 
-// ---- NAVBAR SCROLL EFFECT ----
-const navbar = document.getElementById('navbar');
+// ---- STICKY EFFECTS ----
 const stickyCTA = document.getElementById('stickyCTA');
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-
-  // Navbar
-  if (y > 60) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
 
   // Sticky CTA (shows after hero)
   if (y > 500) stickyCTA.classList.add('show');
@@ -23,25 +18,66 @@ window.addEventListener('scroll', () => {
   else scrollTopBtn.classList.remove('show');
 });
 
+// ---- VIEW SWITCHER LOGIC ----
+function switchView(view) {
+  const jnvView = document.getElementById('view-jnv');
+  const ndaView = document.getElementById('view-nda');
+  const btnJnv = document.getElementById('btn-jnv');
+  const btnNda = document.getElementById('btn-nda');
+
+  if (view === 'nda') {
+    jnvView.style.display = 'none';
+    ndaView.style.display = 'block';
+    if (btnJnv) btnJnv.classList.remove('active');
+    if (btnNda) btnNda.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  } else {
+    jnvView.style.display = 'block';
+    ndaView.style.display = 'none';
+    if (btnJnv) btnJnv.classList.add('active');
+    if (btnNda) btnNda.classList.remove('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  // Refresh AOS for new view immediately
+  const activeView = view === 'nda' ? ndaView : jnvView;
+  const elements = document.querySelectorAll('[data-aos]');
+  const whatsappBtn = document.getElementById('whatsappBtn');
+
+  // Update WhatsApp Floating Button for the active track
+  if (whatsappBtn) {
+    if (view === 'nda') {
+      whatsappBtn.href = "https://wa.me/919579119726?text=Jai%20Hind!%20I%27m%20Interested%20to%20know%20more%20about%20NDA/DCA";
+    } else {
+      whatsappBtn.href = "https://wa.me/919579119726?text=नमस्ते%2C%20मुझे%20नवोदय%20और%20सैनिक%20स्कूल%20कोचिंग%20के%20बारे%20में%20जानकारी%20चाहिए";
+    }
+  }
+  
+  elements.forEach(el => {
+    el.classList.remove('aos-visible');
+    // Force immediate show if it's in the visible fold of the selected view
+    if (activeView.contains(el)) {
+      const rect = el.getBoundingClientRect();
+      // If it's effectively at the top (since we just scrolled to 0) or within 1000px
+      if (rect.top < 1000) {
+        el.classList.add('aos-visible');
+      }
+    }
+    if (typeof observer !== 'undefined') {
+      observer.observe(el);
+    }
+  });
+}
+
+// Global exposure
+window.switchView = switchView;
+
 // ---- SCROLL TO TOP ----
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ---- HAMBURGER MENU ----
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('open');
-});
-// Close on link click (mobile)
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('open');
-  });
-});
+
 
 // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -66,8 +102,18 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('aos-visible');
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 aosElements.forEach(el => observer.observe(el));
+
+// Refresh observer logic for dynamic content
+function refreshAOS() {
+  const elements = document.querySelectorAll('[data-aos]');
+  elements.forEach(el => {
+    el.classList.remove('aos-visible');
+    observer.observe(el);
+  });
+}
+window.refreshAOS = refreshAOS;
 
 // ---- ANIMATED COUNTER ----
 const statNums = document.querySelectorAll('.stat-num');
@@ -82,8 +128,12 @@ const statsObserver = new IntersectionObserver((entries) => {
       animateCounter(el, target);
     });
   }
-}, { threshold: 0.3 });
+}, { threshold: 0.2 });
 if (statsSection) statsObserver.observe(statsSection);
+
+// Add NDA stats section to observer
+const ndaStatsSection = document.getElementById('nda-stats');
+if (ndaStatsSection) statsObserver.observe(ndaStatsSection);
 
 function animateCounter(el, target) {
   const duration = 1800;
@@ -202,28 +252,7 @@ function launchConfetti() {
   requestAnimationFrame(draw);
 }
 
-// ---- ACTIVE NAV LINK ON SCROLL ----
-const sections = document.querySelectorAll('section[id]');
-const navLinksList = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < 150) current = section.getAttribute('id');
-  });
-  navLinksList.forEach(link => {
-    link.classList.remove('active-nav');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active-nav');
-    }
-  });
-}, { passive: true });
-
-// Add active nav style
-const navStyle = document.createElement('style');
-navStyle.textContent = '.nav-link.active-nav { color: #C80EE7 !important; }';
-document.head.appendChild(navStyle);
 
 // ---- CARD TILT EFFECT (Desktop only) ----
 if (window.innerWidth > 768) {
